@@ -81,15 +81,3 @@ function animate() {
 
 setup();
 animate();
-function animate() {
-	requestAnimationFrame(animate);
-	c.clearRect(0, 0, canvas.width, canvas.height);
-	for (let i = 0; i < circles.length; i++) {
-		circles[i].update();
-		if (circles[i].energy() < 1)
-			circles[i].reset(); 
-	}
-}
-
-setup();
-animate();
