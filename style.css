@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Nick Witthoeft</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	@keyframes colorFade { from { color: #5d5d5d; } to { color: black; } }, { from { font-size: 100% } to { font-size: 180%; } }
+
+body {
+  padding-bottom: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-family: 'Roboto', sans-serif;
+}
+
+hr {
+  border: none;
+  height: 5px;
+  background-color: #333;
+}
+
+canvas {
+  align-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.link {
+  font-family: 'Lato', sans-serif;
+  font-size: 110%;
+  padding: 10px;
+}
+
+.title {
+  font-size: 150%;
+  color: #d6d6d6;
+  text-align: left;
+}
+
+.gus-title {
+  color: black;
+  animation: colorFade ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration :300ms;
+  transition: font-size 300ms ease-in-out 0s;
+}
+
+.title:hover .gus-title {
+  font-size: 140%;
+}
