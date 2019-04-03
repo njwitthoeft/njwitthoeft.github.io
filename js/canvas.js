@@ -1,3 +1,30 @@
+// idea from christopher4lis canvas tutorial
+var canvas = document.querySelector('canvas');
+canvas.width = window.innerWidth;
+canvas.height = 700;
+var c = canvas.getContext('2d');
+var gravity = 0.5;
+
+function Circle(x, y, dx, dy, radius, color) {
+	this.dx = dx;
+	this.dy = dy;
+	this.x = x;
+	this.y = y;
+	this.radius = radius;
+	this.color = color;
+	this.energy;
+	this.friction = Math.random() * .05 + .90;
+}
+
+Circle.prototype.draw = function() {
+	// show the circle
+	c.beginPath();
+	c.fillStyle = this.color;
+	c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+	c.fill();
+}
+
+Circle.prototype.update = function() {	
 	// hit the walls
 	if (this.x + this.radius + this.dx > innerWidth || this.x - this.radius < 0)
 		this.dx *= -1;
@@ -42,6 +69,18 @@ function setup() {
 	}
 }
 
+function animate() {
+	requestAnimationFrame(animate);
+	c.clearRect(0, 0, canvas.width, canvas.height);
+	for (let i = 0; i < circles.length; i++) {
+		circles[i].update();
+		if (circles[i].energy() < 1)
+			circles[i].reset(); 
+	}
+}
+
+setup();
+animate();
 function animate() {
 	requestAnimationFrame(animate);
 	c.clearRect(0, 0, canvas.width, canvas.height);
