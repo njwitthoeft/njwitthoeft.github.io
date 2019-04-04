@@ -3,7 +3,7 @@ var canvas = document.querySelector('canvas');
 canvas.width = window.innerWidth;
 canvas.height = 700;
 var c = canvas.getContext('2d');
-var gravity = 0.5;
+var gravity = 1;
 
 function Circle(x, y, dx, dy, radius, color) {
 	this.dx = dx;
@@ -14,13 +14,14 @@ function Circle(x, y, dx, dy, radius, color) {
 	this.color = color;
 	this.energy;
 	this.friction = Math.random() * .05 + .90;
+	this.arclength = Math.random() * Math.PI * 2
 }
 
 Circle.prototype.draw = function() {
 	// show the circle
 	c.beginPath();
 	c.fillStyle = this.color;
-	c.arc(this.x, this.y, this.radius, 0, Math.PI * 1, false);
+	c.arc(this.x, this.y, this.radius, 0, this.arclength, false);
 	c.fill();
 }
 
@@ -50,6 +51,7 @@ Circle.prototype.reset = function() {
 	this.y = Math.random() * -Math.random() * 120 - 50;
 	this.dx = (Math.random() * 10) - 5;
 	this.dy = (Math.random() * 10) - 5;
+	this.arclength = Math.random() * Math.PI * 2
 	let r = Math.floor(Math.random() * 255);
 	let g = Math.floor(Math.random() * 255);
 	let b = Math.floor(Math.random() * 255);
