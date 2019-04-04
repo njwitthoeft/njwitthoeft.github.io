@@ -11,19 +11,30 @@ body {
   padding-left: 10%;
   padding-right: 10%;
   font-family: 'Roboto', sans-serif;
+  clear:"left"
+  display:"block"
+
 }
 
 hr {
   border: none;
+  margin-top: 1em;
   height: 5px;
   background-color: #333;
+  clear: left
 }
 
 canvas {
   align-content: center;
-  margin-top: 20px;
+  margin-top: 0.5em;
   width: 100%;
 }
+
+
+.tab { 
+	margin-left: 40px; 
+}
+
 
 .link {
   font-family: 'Lato', sans-serif;
@@ -44,6 +55,40 @@ canvas {
   animation-duration :300ms;
   transition: font-size 300ms ease-in-out 0s;
 }
+
+/* entire container, keeps perspective */
+.flip-container {
+	float: inline-start;
+	
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+	width: 300px;
+	height: 200px;
+	border-radius: 50px ;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.5s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
 
 .title:hover .gus-title {
   font-size: 140%;
