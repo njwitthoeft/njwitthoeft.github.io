@@ -20,7 +20,7 @@ Circle.prototype.draw = function() {
 	// show the circle
 	c.beginPath();
 	c.fillStyle = this.color;
-	c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+	c.arc(this.x, this.y, this.radius, 0, Math.PI * 1, false);
 	c.fill();
 }
 
