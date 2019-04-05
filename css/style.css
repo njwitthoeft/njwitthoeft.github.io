@@ -30,6 +30,9 @@ canvas {
   width: 100%;
 }
 
+.righttext {
+  text-align: right;
+}
 
 .tab { 
 	margin-left: 40px; 
