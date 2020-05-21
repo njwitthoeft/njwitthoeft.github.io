@@ -55,6 +55,16 @@ canvas {
   color: black;
 }
 
+.menubutton {
+	float: left;
+	background: white;
+	text-align: center;
+	paddding: 10px
+	border: 2px solid black;
+	width: 10%;
+	height: 25px;
+	clear: right;
+}
 
 </style>
 </html>
