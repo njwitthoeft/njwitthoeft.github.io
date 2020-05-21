@@ -53,10 +53,6 @@ canvas {
 
 .gus-title {
   color: black;
-  animation: colorFade ease-in 1;
-  animation-fill-mode: forwards;
-  animation-duration :300ms;
-  transition: font-size 300ms ease-in-out 0s;
 }
 
 
