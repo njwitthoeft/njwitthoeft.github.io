@@ -66,5 +66,12 @@ canvas {
 	clear: right;
 }
 
+a:link{
+	color: blue;
+}
+
+a:visited{
+	color: blue;
+}
 </style>
 </html>
