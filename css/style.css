@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<style>
-	<meta charset="UTF-8">
-	<title>Nick Witthoeft</title>
-
- @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
 
 body {
   padding-bottom: 50px;
   padding-left: 10%;
   padding-right: 10%;
-	font-family: "IBM Plex Sans";
+	font-family: 'Lato', serif;
   clear:"left"
   display:"block"
 
@@ -50,10 +42,12 @@ canvas {
   font-size: 150%;
   color: black;
   text-align: left;
+	font-family: 'Jost';
 }
 
 .gus-title {
   color: black;
+	font-family: 'Jost';
 }
 
 .menubutton {
@@ -69,11 +63,9 @@ canvas {
 
 a:link{
 	color: blue;
+
 }
 
 a:visited{
 	color: blue;
 }
-
-</style>
-</html>
