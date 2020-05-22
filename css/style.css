@@ -56,11 +56,23 @@ canvas {
 	text-align: center;
 	paddding: 10px
 	border: 2px solid black;
-	width: 10%;
+	width: 20%;
 	height: 25px;
 	clear: right;
 }
 
+.dates {
+  float: right;
+}
+
+.cat {
+  float: left;
+}
+
+.skill{
+  column-count: 3;
+}
+}
 a:link{
 	color: blue;
 
